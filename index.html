@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Простой и удобный список задач для повседневной продуктивности." />
+
+  <title>To-Do List — Список задач</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div class="header-content">
+        <h1>To-Do List</h1>
+        <p>Организуй свои дела и ничего не забывай.</p>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-value" id="total-count">0</span>
+        <span class="stat-label">Всего задач</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-value" id="completed-count">0</span>
+        <span class="stat-label">Выполнено</span>
+      </div>
+    </section>
+
+    <section class="task-input-section">
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Добавить новую задачу..." autocomplete="off" maxlength="200"
+          aria-label="Название новой задачи" />
+
+        <button type="submit" id="add-task-button">
+          <span>+</span>
+          Добавить
+        </button>
+      </form>
+    </section>
+
+    <section class="tasks-section">
+      <div class="tasks-header">
+        <h2>Мои задачи</h2>
+        <span id="remaining-count">0 осталось</span>
+      </div>
+
+      <nav class="task-filters" aria-label="Фильтрация задач">
+        <button class="filter-button active" type="button" data-filter="all">Все</button>
+
+        <button class="filter-button" type="button" data-filter="active">Активные</button>
+
+        <button class="filter-button" type="button" data-filter="completed">
+          Выполненные
+        </button>
+      </nav>
+
+      <ul class="task-list" id="task-list">
+        <!-- Список задач будет сформирован с помощью JavaScript -->
+      </ul>
+
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">✓</div>
+        <h3>Здесь пока пусто</h3>
+        <p>Добавь свою первую задачу!</p>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>Маленькие шаги — большие результаты.</p>
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
